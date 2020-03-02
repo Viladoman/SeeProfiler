@@ -1,0 +1,45 @@
+// VS Code settings shared across project members.
+// https://code.visualstudio.com/docs/getstarted/settings
+{
+    // Configure glob patterns for excluding files and folders.
+    "files.exclude": {
+        "**/.git": true
+    },
+
+    // Don't ignore extension recommendations.
+    "extensions.ignoreRecommendations": false,
+
+    // Controls how the editor should render whitespace characters,
+    // possibilities are 'none', 'boundary', and 'all'. The 'boundary' option
+    // does not render single spaces between words.
+    "editor.renderWhitespace": "all",
+
+    // Controls whether the editor should render indent guides.
+    "editor.renderIndentGuides": true,
+
+    // Controls how lines should wrap. Can be:
+    //  - 'off' (disable wrapping),
+    //  - 'on' (viewport wrapping),
+    //  - 'wordWrapColumn' (wrap at `editor.wordWrapColumn`) or
+    //  - 'bounded' (wrap at minimum of viewport and `editor.wordWrapColumn`).
+    "editor.wordWrap": "off",
+
+    // Format a file on save. A formatter must be available, the file must not
+    // be auto-saved, and editor must not be shutting down.
+    // Disabled to prevent unnecessary conflicts when someone forgot to format
+    // code properly.
+    "editor.formatOnSave": false,
+
+    // Columns at which to show vertical rulers.
+    "editor.rulers": [
+        80,
+        100
+    ],
+
+    // Markdown-specific settings.
+    "[markdown]": {
+        // Markdown files have less formatting issues when lines are not cut.
+        "editor.wordWrap": "on",
+        "editor.rulers": []
+    }
+}

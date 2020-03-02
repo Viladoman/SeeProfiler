@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>See++ Compiler Profiler</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div id="cover" class="modal">
+      <p id="dragTitle">See++ COMPILER PROFILER</p>
+      <p id="coverLine"></p>
+      <div id="dragTarget" class="coverDrag"></div>
+    </div>
+    <div class="full">
+      <div class="fullOverviewGraph"><canvas id="overviewGraphCanvas"/></div>
+      <div class="fullOverviewTabs" id="overviewTabContainer"><!-- JS fills this section --></div>
+    </div>
+    <script>require('./src/main.js')</script>
+  </Body>
+</html>

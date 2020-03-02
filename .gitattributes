@@ -1,0 +1,43 @@
+# https://git-scm.com/docs/gitattributes
+
+# Ensure that text files that any contributor introduces to the repository have
+# their line endings normalized, you can set the text attribute to "auto" for
+# all files.
+* text=auto
+
+# Windows specific.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Unix specific.
+*.bash text eol=lf
+*.csh text eol=lf
+*.sh text eol=lf
+configure text eol=lf
+configure.ac text eol=lf
+
+# Well-known binary files.
+# In case of conflict with a specific file format, feel free to remove the
+# problematic line.
+*.a -text
+*.bin -text
+*.bmp -text
+*.com -text binary
+*.dll -text
+*.dylib -text
+*.doc -text
+*.docx -text
+*.exe -text
+*.gif -text
+*.ico -text
+*.jpg -text
+*.lib -text
+*.obj -text
+*.pdb -text
+*.pdf -text
+*.png -text
+*.ppt -text
+*.pptx -text
+*.so -text
+*.suo -text

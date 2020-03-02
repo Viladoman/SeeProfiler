@@ -1,0 +1,18 @@
+// Recommended VS Code extensions.
+//
+// https://code.visualstudio.com/docs/editor/extension-gallery#_workspace-recommended-extensions
+//
+// To show the recommended recommendations for this workspace in VS Code, press
+// the [F1] key and type/select:
+//      "Extensions: Show workspace recommended extensions".
+{
+    "recommendations": [
+        "msjsdiag.debugger-for-chrome",
+        "codezombiech.gitignore",
+        "DavidAnson.vscode-markdownlint",
+        "donjayamanne.githistory",
+        "EditorConfig.editorconfig",
+        "mdickin.markdown-shortcuts",
+        "waderyan.gitblame"
+    ]
+}

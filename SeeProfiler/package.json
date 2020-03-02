@@ -1,0 +1,20 @@
+{
+  "name": "SeeProfiler",
+  "version": "0.1.0",
+  "description": "C++ Compilation Profiler",
+  "main": "app.js",
+  "scripts": {
+    "postinstall": "call ./node_modules/.bin/electron-rebuild.cmd",
+    "start": "electron .",
+    "export": "electron-packager . --out=../ --overwrite --ignore=\\.npmrc --icon=main/data/logo.ico"
+  },
+  "author": "Ramon Viladomat",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "latest",
+    "electron-packager": "latest",
+    "electron-rebuild": "latest",
+    "electron-reload": "latest"
+  },
+  "dependencies": {}
+}
