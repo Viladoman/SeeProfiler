@@ -1,6 +1,6 @@
 # See++ Compiler Profiler
 
-Visual C/C++ Profiler for Clang 9 or higher. By Using the flag *-ftime-trace* (see [Clang 9 release notes](https://releases.llvm.org/9.0.0/tools/clang/docs/ReleaseNotes.html#id7)) clang will create a time report (*.json*) next to the generated *.obj* file. Within See++ Compiler Profiler you can aggregate mulitple reports in one single view giving valuable information at a project scale.
+Visual C/C++ Profiler for Clang 9 or higher. By Using the flag *-ftime-trace* (see [Clang 9 release notes](https://releases.llvm.org/9.0.0/tools/clang/docs/ReleaseNotes.html#id7)) clang will create a time report (*.json*) next to the generated *.obj* file. Within **See++ Compiler Profiler** you can aggregate mulitple reports in one single view giving valuable information at a project scale.
 
 It will help you indentify and track inside your codebase the most expensive includes, templates, function instantiations... 
 
@@ -37,7 +37,7 @@ Alternatively you can also run it with within Visual Studio Code.
 If you want to export the project as a standalone application:
 
 ```
-npm export
+npm run export
 ```
 
 ## External Libraries
