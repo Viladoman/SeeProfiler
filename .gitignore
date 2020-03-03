@@ -27,3 +27,6 @@
 # Node JS
 node_modules/
 
+# Exports
+SeeProfiler-*/
+
