@@ -12,7 +12,7 @@ It will help you indentify and track inside your codebase the most expensive inc
 
 First of all you need [node.js](https://nodejs.org/) installed. 
 
-Open a terminal in your porject folder, and make sure you are inside the SeeProfiler subfolder:
+Open a terminal in your project folder, and make sure you are inside the SeeProfiler subfolder:
 
 ```
 cd SeeProfiler
