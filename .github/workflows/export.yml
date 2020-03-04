@@ -7,6 +7,10 @@ jobs:
     name: Export on node ${{ matrix.node_version }} and ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     
+    env:
+      CI: true
+      working-directory: ./SeeProfiler 
+    
     strategy:
       matrix:
         node-version: [12.x]
@@ -22,11 +26,9 @@ jobs:
       run: |
         npm install
         npm test --if-present
-      working-directory: SeeProfile
+      working-directory: ${{env.working-directory}}
     - name: Export
       run: npm run export
-      working-directory: SeeProfile
+      working-directory: ${{env.working-directory}}
     # TODO
-    # grab here the data, zip it and publish a release ( only perform this operation on tag releases )   
-      env:
-        CI: true
+    # grab here the data, zip it and publish a release ( only perform this operation on tag releases )  
