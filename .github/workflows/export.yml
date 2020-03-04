@@ -35,10 +35,10 @@ jobs:
     - name: Generate Artifact
       if: ${{ matrix.os }} != 'windows-latest'
       run:   |
-        if [ "$RUNNER_OS" == "Windows" ]; then
-          Compress-Archive -Path ./Export/* -DestinationPath ${{env.artifact-name}}.zip  
-        else
+        #if [ "$RUNNER_OS" == "Windows" ]; then
+        #  Compress-Archive -Path ./Export/* -DestinationPath ${{env.artifact-name}}.zip  
+        #else
           zip -r ${{env.artifact-name}} Export/*
-        fi
+        #fi
       shell: bash
     # TODO - Create Release and upload the assets
