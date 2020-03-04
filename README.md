@@ -8,7 +8,15 @@ It will help you indentify and track inside your codebase the most expensive inc
 
 ## Usage
 
-//TODO - add screenshots here
+Drag or open the folder or files you want to inspect. All the files will be parsed ( this can take some time if the project is really big) and the overview window will show up with a full recap for all translation units found.
+
+![Overview screenshot](https://github.com/Viladoman/SeeProfiler/wiki/images/overviewScreenshot.png?raw=true)
+
+The graphs on top can be used to switch between the different categories in order to visualize more specific data. 
+
+At any point you can double click one row to visualize the actual timeline for the given translation unit or the translation unit that had the worst offender ( if a source, class, function has been selected )
+
+![Timeline screenshot](https://github.com/Viladoman/SeeProfiler/wiki/images/timelineScreenshot.png?raw=true)
 
 ## How to build the project
 
