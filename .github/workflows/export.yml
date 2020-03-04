@@ -22,8 +22,10 @@ jobs:
       run: |
         npm install
         npm test --if-present
+      working-directory: SeeProfile
     - name: Export
       run: npm run export
+      working-directory: SeeProfile
     # TODO
     # grab here the data, zip it and publish a release ( only perform this operation on tag releases )   
       env:
