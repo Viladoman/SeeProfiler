@@ -4,9 +4,8 @@
   "description": "C++ Compilation Profiler",
   "main": "app.js",
   "scripts": {
-    "postinstall": "call ./node_modules/.bin/electron-rebuild.cmd",
     "start": "electron .",
-    "export": "electron-packager . --out=../ --overwrite --ignore=\\.npmrc --icon=main/data/logo.ico"
+    "export": "electron-packager . --out=../Export/ --overwrite --ignore=\\.npmrc --icon=main/data/logo.ico"
   },
   "author": "Ramon Viladomat",
   "license": "ISC",

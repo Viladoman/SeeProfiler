@@ -25,8 +25,9 @@
 *.sublime-workspace
 
 # Node JS
+package-lock.json
 node_modules/
 
 # Exports
-SeeProfiler-*/
+Export/
 
