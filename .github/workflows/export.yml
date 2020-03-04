@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Export App
 
 on: [push] 
 #TODO ~ do it only based on version tags
