@@ -40,4 +40,5 @@ jobs:
         else
           zip -r ${{env.artifact-name}} Export/*
         fi
+      shell: bash
     # TODO - Create Release and upload the assets
