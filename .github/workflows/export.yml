@@ -10,7 +10,8 @@ jobs:
     env:
       CI: true
       working-directory: ./SeeProfiler 
-    
+      artifact-name: SeeProfiler
+          
     strategy:
       matrix:
         node-version: [12.x]
@@ -31,5 +32,9 @@ jobs:
       run: npm run export
       working-directory: ${{env.working-directory}}
     - name: Generate Artifact
-      run: zip -r SeeProfiler Export/*
+      if: ${{ matrix.os }} != 'windows-latest'
+      run: zip -r ${{env.artifact-name}} Export/*
+    - name: Generate Artifact
+      if: ${{ matrix.os }} == 'windows-latest'
+      run: Compress-Archive -Path ./Export/* -DestinationPath ${{env.artifact-name}}.zip
     # TODO - Create Release and upload the assets
