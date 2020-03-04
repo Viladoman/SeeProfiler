@@ -27,8 +27,9 @@ jobs:
         npm install
         npm test --if-present
       working-directory: ${{env.working-directory}}
-    - name: Export
+    - name: Export App
       run: npm run export
       working-directory: ${{env.working-directory}}
-    # TODO
-    # grab here the data, zip it and publish a release ( only perform this operation on tag releases )  
+    - name: Generate Artifact
+      run: zip -r SeeProfiler Export/*
+    # TODO - Create Release and upload the assets
