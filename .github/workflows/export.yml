@@ -1,6 +1,7 @@
 name: Node.js CI
 
 on: [push] 
+#TODO ~ do it only based on version tags
 
 jobs:
   export:
@@ -33,8 +34,10 @@ jobs:
       working-directory: ${{env.working-directory}}
     - name: Generate Artifact
       if: ${{ matrix.os }} != 'windows-latest'
-      run: zip -r ${{env.artifact-name}} Export/*
-    - name: Generate Artifact
-      if: ${{ matrix.os }} == 'windows-latest'
-      run: Compress-Archive -Path ./Export/* -DestinationPath ${{env.artifact-name}}.zip
+      run:   |
+        if [ "$RUNNER_OS" == "Windows" ]; then
+          Compress-Archive -Path ./Export/* -DestinationPath ${{env.artifact-name}}.zip  
+        else
+          zip -r ${{env.artifact-name}} Export/*
+        fi
     # TODO - Create Release and upload the assets
