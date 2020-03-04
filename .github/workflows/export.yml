@@ -32,13 +32,10 @@ jobs:
     - name: Export App
       run: npm run export
       working-directory: ${{env.working-directory}}
-    - name: Generate Artifact
-      if: ${{ matrix.os }} != 'windows-latest'
-      run:   |
-        #if [ "$RUNNER_OS" == "Windows" ]; then
-        #  Compress-Archive -Path ./Export/* -DestinationPath ${{env.artifact-name}}.zip  
-        #else
-          zip -r ${{env.artifact-name}} Export/*
-        #fi
-      shell: bash
+    - name: Generate Artifact 1
+      if: runner.os == 'Windows'
+      run: Compress-Archive -Path ./Export/* -DestinationPath ${{env.artifact-name}}.zip  
+    - name: Generate Artifact 2
+      if: runner.os != 'Windows'
+      run: zip -r ${{env.artifact-name}} Export/*
     # TODO - Create Release and upload the assets
