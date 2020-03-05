@@ -2,27 +2,29 @@
 
 # See++ Compiler Profiler [![Export App](https://github.com/Viladoman/SeeProfiler/workflows/Export%20App/badge.svg)](https://github.com/Viladoman/SeeProfiler/actions)
 
-Visual C/C++ Profiler for Clang 9 or higher. Using the flag *-ftime-trace* (see [Clang 9 release notes](https://releases.llvm.org/9.0.0/tools/clang/docs/ReleaseNotes.html#id7)) clang will create a time report (*.json*) next to the generated *.obj* file. Within **See++ Compiler Profiler** you can aggregate mulitple reports in one single view giving valuable information at a project scale.
+Visual C/C++ Profiler for Clang 9 or higher. Using the flag *-ftime-trace* (see [Clang 9 release notes](https://releases.llvm.org/9.0.0/tools/clang/docs/ReleaseNotes.html#id7)) Clang will create a time report (*.json*) next to the generated *.obj* file. Within **See++ Compiler Profiler** multiple reports can be aggregated in one single view, giving valuable information at a project scale.
 
-It will help you indentify and track inside your codebase the most expensive includes, templates, function instantiations... 
+It will help identify and track how includes, templates, function instantiations, etc. perform inside the compiler, being able to pinpoint the most expensive ones (or anything of particular interest, really).
 
 ## Usage
 
-Drag or open the folder or files you want to inspect. All the files will be parsed ( this can take some time if the project is really big) and the overview window will show up with a full recap for all translation units found.
+Drag or open the folders and files to be inspected. All the files will be parsed (this can take some time if the project is really big) and the overview window will show up with a full recap for all translation units found.
 
 ![Overview screenshot](https://github.com/Viladoman/SeeProfiler/wiki/images/overviewScreenshot.png?raw=true)
 
 The graphs on top can be used to switch between the different categories in order to visualize more specific data. 
 
-At any point you can double click one row to visualize the actual timeline for the given translation unit or the translation unit that had the worst offender ( if a source, class, function has been selected )
+Any row can be double-clicked to visualize the actual timeline for the given translation unit or for the translation unit that contains the worst offender (for source, class, function...).
 
 ![Timeline screenshot](https://github.com/Viladoman/SeeProfiler/wiki/images/timelineScreenshot.png?raw=true)
 
+(use *Ctrl+MouseWheel* for zoom in/out)
+
 ## How to build the project
 
-First of all you need [node.js](https://nodejs.org/) installed. 
+First of all [node.js](https://nodejs.org/) needs to be installed. 
 
-Open a terminal in your project folder, and make sure you are inside the SeeProfiler subfolder:
+Make sure the commands are run inside the SeeProfiler subfolder:
 
 ```
 cd SeeProfiler
@@ -40,11 +42,11 @@ Run the application:
 npm start
 ```
 
-Alternatively you can also run it with within Visual Studio Code. 
+Alternatively the App can be launched within [Visual Studio Code](https://code.visualstudio.com/). 
 
 ## Creating a package
 
-If you want to export the project as a standalone application:
+To export the project as a standalone application:
 
 ```
 npm run export
@@ -52,5 +54,4 @@ npm run export
 
 ## External Libraries
 
-- See++ Compiler Profiler is based on [Electron](https://www.electronjs.org/). 
-- [Electron](https://www.electronjs.org/) is based on [node.js](https://nodejs.org/).
+- **See++ Compiler Profiler** is based on [Electron](https://www.electronjs.org/). 
