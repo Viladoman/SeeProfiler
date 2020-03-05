@@ -18,7 +18,9 @@ jobs:
     strategy:
       matrix:
         node-version: [12.x]
-        os: [ubuntu-latest, windows-latest, macOS-latest]
+        #os: [ubuntu-latest, windows-latest, macOS-latest]
+        os: [windows-latest] # only exporting for windows as the create-release fails when trying to add the asset for a second platform
+
 
     steps:
     - name: Checkout
