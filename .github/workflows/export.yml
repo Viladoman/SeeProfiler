@@ -13,6 +13,7 @@ jobs:
     env:
       CI: true
       working-directory: ./SeeProfiler
+      export-directory: ./Export
       artifact-name: SeeProfiler
 
     strategy:
@@ -37,10 +38,11 @@ jobs:
       working-directory: ${{env.working-directory}}
     - name: Generate Artifact 1
       if: runner.os == 'Windows'
-      run: Compress-Archive -Path ./Export/* -DestinationPath ${{env.artifact-name}}.zip
+      run: Compress-Archive -Path ${{env.export-directory}}/* -DestinationPath ${{env.artifact-name}}.zip
     - name: Generate Artifact 2
       if: runner.os != 'Windows'
-      run: zip -r ${{env.artifact-name}} Export/*
+      run: zip -r ${{env.artifact-name}} ./*
+      working-directory: ${{env.export-directory}}
     - name: Upload Release Asset
       id: upload-release-asset
       uses: actions/upload-release-asset@v1
