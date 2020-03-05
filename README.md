@@ -6,7 +6,11 @@ Visual C/C++ Profiler for Clang 9 or higher. Using the flag *-ftime-trace* (see 
 
 It will help identify and track how includes, templates, function instantiations, etc. perform inside the compiler, being able to pinpoint the most expensive ones (or anything of particular interest, really).
 
-[Download for Windows](https://github.com/Viladoman/SeeProfiler/releases/latest/download/SeeProfiler-Windows.zip)
+[Get Latest Windows](https://github.com/Viladoman/SeeProfiler/releases/latest/download/SeeProfiler-Windows.zip)
+
+[Get Latest Linux](https://github.com/Viladoman/SeeProfiler/releases/latest/download/SeeProfiler-Linux.zip)
+
+[Get Latest MacOS](https://github.com/Viladoman/SeeProfiler/releases/latest/download/SeeProfiler-macOS.zip)
 
 ## Usage
 
