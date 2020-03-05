@@ -1,10 +1,12 @@
 
 
-# See++ Compiler Profiler [![Export App](https://github.com/Viladoman/SeeProfiler/workflows/Export%20App/badge.svg)](https://github.com/Viladoman/SeeProfiler/actions)
+# See++ Compiler Profiler [![Export App](https://github.com/Viladoman/SeeProfiler/workflows/Export%20App/badge.svg)](https://github.com/Viladoman/SeeProfiler/actions) 
 
 Visual C/C++ Profiler for Clang 9 or higher. Using the flag *-ftime-trace* (see [Clang 9 release notes](https://releases.llvm.org/9.0.0/tools/clang/docs/ReleaseNotes.html#id7)) Clang will create a time report (*.json*) next to the generated *.obj* file. Within **See++ Compiler Profiler** multiple reports can be aggregated in one single view, giving valuable information at a project scale.
 
 It will help identify and track how includes, templates, function instantiations, etc. perform inside the compiler, being able to pinpoint the most expensive ones (or anything of particular interest, really).
+
+[Download for Windows](https://github.com/Viladoman/SeeProfiler/releases/latest/download/SeeProfiler-Windows.zip)
 
 ## Usage
 
