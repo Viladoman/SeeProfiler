@@ -50,7 +50,7 @@ function CreateObjectData(file,events,globals)
     if (element.tid == 0 && element.name != 'process_name')
     {
       var node = {label: element.args.detail, type: Defs.NodeNatureFromString(element.name), start: element.ts, duration: element.dur, maxDepth: 0, children: []};
-      if (node.type == Defs.NodeNature.SOURCE){ node.label = path.basename(node.label); }
+      if (node.type == Defs.NodeNature.SOURCE){ node.label = path.basename(node.label).toLowerCase(); }
       if (node.type == Defs.NodeNature.EXECUTECOMPILER){ node.label = objectDB.info.label; }
       nodes.push(node);
       FillGlobalData(node,globals,objectDB);
