@@ -5,8 +5,9 @@ const {dialog} = require('electron').remote;
 var hardcodedDir = undefined;
 //hardcodedDir = '... Your Hardcoded path here for fast development ...';
 
-function OpenFilesDialog(callback) { dialog.showOpenDialog({ properties: ['openFile', 'multiSelections'], filters: [{ name: 'Json', extensions: ['json'] }] }, callback); }
-function OpenDirsDialog(callback) { dialog.showOpenDialog({ properties: [ 'openDirectory', 'multiSelections'] }, callback); }
+function OpenDialogWithCallback(description, callback){ dialog.showOpenDialog(description).then((data) => { callback(data.filePaths); }); }
+function OpenFilesDialog(callback) { OpenDialogWithCallback({ properties: ['openFile', 'multiSelections'], filters: [{ name: 'Json', extensions: ['json'] }] }, callback); }
+function OpenDirsDialog(callback) { OpenDialogWithCallback({ properties: [ 'openDirectory', 'multiSelections'] }, callback); }
 
 function Cover()
 {
