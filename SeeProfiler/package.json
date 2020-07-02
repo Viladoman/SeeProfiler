@@ -1,6 +1,6 @@
 {
   "name": "SeeProfiler",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "C++ Compilation Profiler",
   "main": "app.js",
   "scripts": {
