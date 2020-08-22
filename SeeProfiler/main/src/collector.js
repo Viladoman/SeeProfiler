@@ -49,7 +49,8 @@ function CreateObjectData(file,events,globals)
     var element = events[i];
     if (element.tid == 0 && element.name != 'process_name')
     {
-      var node = {label: element.args.detail, type: Defs.NodeNatureFromString(element.name), start: element.ts, duration: element.dur, maxDepth: 0, children: []};
+      var name = element.args? element.args.detail : element.name;
+      var node = {label: name, type: Defs.NodeNatureFromString(element.name), start: element.ts, duration: element.dur, maxDepth: 0, children: []};
       if (node.type == Defs.NodeNature.SOURCE){ node.label = path.basename(node.label).toLowerCase(); }
       if (node.type == Defs.NodeNature.EXECUTECOMPILER){ node.label = objectDB.info.label; }
       nodes.push(node);
@@ -112,7 +113,8 @@ function CreateTreeRoot(file,events)
     var element = events[i];
     if (element.tid == 0 && element.name != 'process_name')
     {
-      var node = {label: element.args.detail, type: Defs.NodeNatureFromString(element.name), start: element.ts, duration: element.dur, maxDepth: 0, children: []};
+      var name = element.args? element.args.detail : element.name;
+      var node = {label: name, type: Defs.NodeNatureFromString(element.name), start: element.ts, duration: element.dur, maxDepth: 0, children: []};
       if (node.type == Defs.NodeNature.SOURCE){ node.label = path.basename(node.label); }
       if (node.type == Defs.NodeNature.EXECUTECOMPILER){ node.label = baseLabel; }
       nodes.push(node);
