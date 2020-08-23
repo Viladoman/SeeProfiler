@@ -8,9 +8,9 @@ It will help identify and track how includes, templates, function instantiations
 
 [Get Latest Windows](https://github.com/Viladoman/SeeProfiler/releases/latest/download/SeeProfiler-Windows.zip)
 
-[Get Latest Linux](https://github.com/Viladoman/SeeProfiler/releases/latest/download/SeeProfiler-Linux.zip)
+[Get Latest Linux](https://github.com/Viladoman/SeeProfiler/releases/latest/download/SeeProfiler-Linux.zip) (Not tested)
 
-[Get Latest MacOS](https://github.com/Viladoman/SeeProfiler/releases/latest/download/SeeProfiler-macOS.zip)
+[Get Latest MacOS](https://github.com/Viladoman/SeeProfiler/releases/latest/download/SeeProfiler-macOS.zip) (Not tested)
 
 ## Usage
 
