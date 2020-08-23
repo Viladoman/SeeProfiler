@@ -10,8 +10,7 @@ function IsDirectory(dir,callback){ fs.stat(dir, function(err, stat) { callback(
 
 function IsExtensionFile(file,extension)
 {
-  var extensionLength = extension.length+1;
-  return file.length > extensionLength && file.indexOf('.'+extension) == file.length-extensionLength;
+  return (file.split('.').pop()) == extension;
 }
 
 function ParseCompilerData(file,callback,doneCallback)

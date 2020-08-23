@@ -43,11 +43,13 @@ function CreateObjectData(file,events,globals)
   var nodes = [];
   var objectDB = { info: { label: path.basename(file).replace(/\.[^/.]+$/, "")}};
 
+  var refernceTid = events.length > 0? events[0].tid : 0;
+
   //replace this foreach
   for (var i=0,sz=events.length;i<sz;++i)
   {
     var element = events[i];
-    if (element.tid == 0 && element.name != 'process_name')
+    if (element.tid == refernceTid && element.name != 'process_name' && element.name != 'thread_name')
     {
       var name = element.args? element.args.detail : element.name;
       var node = {label: name, type: Defs.NodeNatureFromString(element.name), start: element.ts, duration: element.dur, maxDepth: 0, children: []};
@@ -107,11 +109,13 @@ function CreateTreeRoot(file,events)
   var nodes = [];
   var baseLabel = path.basename(file).replace(/\.[^/.]+$/, "");
 
+  var refernceTid = events.length > 0? events[0].tid : 0;
+
   //replace this foreach
   for (var i=0,sz=events.length;i<sz;++i)
   {
     var element = events[i];
-    if (element.tid == 0 && element.name != 'process_name')
+    if (element.tid == refernceTid && element.name != 'process_name' && element.name != 'thread_name')
     {
       var name = element.args? element.args.detail : element.name;
       var node = {label: name, type: Defs.NodeNatureFromString(element.name), start: element.ts, duration: element.dur, maxDepth: 0, children: []};
