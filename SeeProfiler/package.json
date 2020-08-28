@@ -1,11 +1,11 @@
 {
   "name": "SeeProfiler",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "C++ Compilation Profiler",
   "main": "app.js",
   "scripts": {
     "start": "electron .",
-    "export": "electron-packager . --out=../Export/ --overwrite --ignore=\\.npmrc --icon=main/data/logo.ico"
+    "export": "electron-packager . --out=../Export/ --overwrite --ignore=\\.npmrc --icon=main/data/logo.png"
   },
   "author": "Ramon Viladomat",
   "license": "ISC",

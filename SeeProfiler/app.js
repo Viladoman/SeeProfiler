@@ -14,6 +14,8 @@ if (!app.isPackaged){
 // be closed automatically when the JavaScript object is garbage collected.
 let win
 
+let iconPath = process.platform === "win32"? path.join(__dirname, 'main', 'data', 'logo.ico') : undefined;
+
 let extraWindows = [];
 
 function CloseAllExtraWindows()
@@ -36,11 +38,7 @@ function CloseAllExtraWindows()
 function CreateWindow () {
 
   // Create the browser window.
-  win = new BrowserWindow({width: 1600, height: 900, show: false, icon:path.join(__dirname, 'main', 'data', 'logo.ico'),
-    webPreferences: {
-      nodeIntegration: true
-    }
-  })
+  win = new BrowserWindow({width: 1600, height: 900, show: false, icon: iconPath, webPreferences: { nodeIntegration: true }})
 
   // and load the index.html of the app.
   win.loadURL(url.format({
@@ -77,7 +75,7 @@ function CreateExtraWindow(winFolder,id,args){
   winObj = { id: id, args: args };
 
   // Create the browser window.
-  winObj.win = new BrowserWindow({width: 1400, height: 900, show: false, icon:path.join(__dirname, 'main', 'data', 'logo.ico'), webPreferences: { nodeIntegration: true } })
+  winObj.win = new BrowserWindow({width: 1400, height: 900, show: false, icon: iconPath, webPreferences: { nodeIntegration: true } })
 
   // and load the index.html of the app.
   winObj.win.loadURL(url.format({
